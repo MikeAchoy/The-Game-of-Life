@@ -3,7 +3,5 @@ public class App {
 
         Window window = new Window();
         window.setWindowVisible();
-
-        System.out.println("Window is visible!");
     }
 }

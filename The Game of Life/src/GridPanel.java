@@ -60,8 +60,6 @@ public class GridPanel extends JPanel{
         }
     }
 
-    // Game of life computations on matrix
-    // Should get input from last matrix and create a new matrix from that.
     public void startLifeOnGrid() {
         new Thread(() -> {
             do {
@@ -94,9 +92,10 @@ public class GridPanel extends JPanel{
                     }
                 }
     
-                // Render the new state
+                // Render the new generation
                 renderGrid(newCells);
-    
+                
+                // Wait timer
                 try {
                     TimeUnit.MILLISECONDS.sleep(renderDelayMiliseconds);
                 } catch (InterruptedException e) {
