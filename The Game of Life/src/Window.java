@@ -4,8 +4,7 @@ import java.awt.event.MouseEvent;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 
-
-public class Window extends JFrame{
+public class Window extends JFrame {
 
     private GridPanel gridPanel;
     private ControlPanel controlPanel;

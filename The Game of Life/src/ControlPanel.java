@@ -7,7 +7,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
 
-
 public class ControlPanel extends JPanel{
 
     private final int PANEL_WIDTH = 1000;
@@ -76,7 +75,6 @@ public class ControlPanel extends JPanel{
             public void actionPerformed(ActionEvent e){
                 gridPanelRef.clearGrid();
             }
-            
         });
 
         this.speedSlider.addChangeListener(new javax.swing.event.ChangeListener(){

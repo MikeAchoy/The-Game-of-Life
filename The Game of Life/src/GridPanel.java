@@ -2,7 +2,7 @@ import javax.swing.JPanel;
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
-public class GridPanel extends JPanel{
+public class GridPanel extends JPanel {
 
     // Graphics and Matrix variables
     private final int cellSizepx = 10;
@@ -31,10 +31,10 @@ public class GridPanel extends JPanel{
         // Draw each grid cell accorind to lifeCell pos
         g2d.setColor(Color.BLACK);
 
-        for(int i = 0; i < NUMBER_CELL_ROWS; i++){
-            for(int j = 0; j < NUMBER_CELL_COLS; j++){
+        for (int i = 0; i < NUMBER_CELL_ROWS; i++){
+            for (int j = 0; j < NUMBER_CELL_COLS; j++){
                 LifeCell currCell = lifeCells[i][j];
-                if(currCell.isAlive()){
+                if (currCell.isAlive()){
                     g2d.fill3DRect(currCell.getX(), currCell.getY(), cellSizepx, cellSizepx, false);
                 }
             }
@@ -50,9 +50,9 @@ public class GridPanel extends JPanel{
     public void initCells(){
         int xDelta = 0;
         int yDelta = 0;
-        for(int i = 0; i < NUMBER_CELL_ROWS; i++){
+        for (int i = 0; i < NUMBER_CELL_ROWS; i++){
             xDelta = 0;
-            for(int j = 0; j < NUMBER_CELL_COLS; j++){
+            for (int j = 0; j < NUMBER_CELL_COLS; j++){
                 lifeCells[i][j] = new LifeCell(xDelta, yDelta);
                 xDelta += cellSizepx;
             }
@@ -97,7 +97,7 @@ public class GridPanel extends JPanel{
                 renderGrid(newCells);
                 
                 // Wait timer
-                try{
+                try {
                     TimeUnit.MILLISECONDS.sleep(renderDelayMiliseconds);
                 } catch (InterruptedException e){
                     e.printStackTrace();
