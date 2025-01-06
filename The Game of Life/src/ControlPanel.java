@@ -51,9 +51,7 @@ public class ControlPanel extends JPanel{
             public void actionPerformed(ActionEvent e){
                 // I want it to use the gridPanelRef in these methods.
                 gridPanelRef.start();
-
             }
-            
         });
 
         this.stopButton.addActionListener(new ActionListener(){
@@ -62,7 +60,6 @@ public class ControlPanel extends JPanel{
             public void actionPerformed(ActionEvent e){
                 gridPanelRef.stop();
             }
-            
         }); 
 
         this.clearButton.addActionListener(new ActionListener(){
@@ -71,7 +68,6 @@ public class ControlPanel extends JPanel{
             public void actionPerformed(ActionEvent e){
                 gridPanelRef.clearGrid();
             }
-            
         });
 
         this.clearButton.addActionListener(new ActionListener(){
