@@ -45,10 +45,10 @@ public class ControlPanel extends JPanel{
 
     public void initComponentListeners(){
 
-        this.startButton.addActionListener(new ActionListener() {
+        this.startButton.addActionListener(new ActionListener(){
 
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e){
                 // I want it to use the gridPanelRef in these methods.
                 gridPanelRef.start();
 
@@ -56,36 +56,36 @@ public class ControlPanel extends JPanel{
             
         });
 
-        this.stopButton.addActionListener(new ActionListener() {
+        this.stopButton.addActionListener(new ActionListener(){
 
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e){
                 gridPanelRef.stop();
             }
             
         }); 
 
-        this.clearButton.addActionListener(new ActionListener() {
+        this.clearButton.addActionListener(new ActionListener(){
 
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e){
                 gridPanelRef.clearGrid();
             }
             
         });
 
-        this.clearButton.addActionListener(new ActionListener() {
+        this.clearButton.addActionListener(new ActionListener(){
 
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e){
                 gridPanelRef.clearGrid();
             }
             
         });
 
-        this.speedSlider.addChangeListener(new javax.swing.event.ChangeListener() {
+        this.speedSlider.addChangeListener(new javax.swing.event.ChangeListener(){
             @Override
-            public void stateChanged(javax.swing.event.ChangeEvent e) {
+            public void stateChanged(javax.swing.event.ChangeEvent e){
                 // Get newDelay
                 int delayMS = speedSlider.getValue();
 

@@ -1,6 +1,4 @@
 import javax.swing.JFrame;
-import javax.swing.border.Border;
-
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.BorderLayout;
@@ -27,7 +25,7 @@ public class Window extends JFrame{
 
         gridPanel.addMouseListener(new MouseAdapter() {
             @Override
-            public void mouseClicked(MouseEvent e) {
+            public void mouseClicked(MouseEvent e){
                 // Get the x and y coordinates of click
                 int x = e.getX();
                 int y = e.getY();
