@@ -6,8 +6,7 @@ import java.awt.Dimension;
 
 public class Window extends JFrame {
 
-    private GridPanel gridPanel;
-    private ControlPanel controlPanel;
+    private final GridPanel gridPanel;
 
     static final int WINDOW_HEIGHT = 1000;
     static final int WINDOW_WIDTH = 1000;
@@ -20,7 +19,7 @@ public class Window extends JFrame {
         this.setLayout(new BorderLayout());
 
         gridPanel = new GridPanel();
-        this.controlPanel = new ControlPanel(gridPanel);
+        ControlPanel controlPanel = new ControlPanel(gridPanel);
 
         gridPanel.addMouseListener(new MouseAdapter() {
             @Override
@@ -39,7 +38,7 @@ public class Window extends JFrame {
         });
         
         // Add panel here.
-        this.controlPanel.setPreferredSize(new Dimension(1000, 100));
+        controlPanel.setPreferredSize(new Dimension(1000, 100));
         this.gridPanel.setPreferredSize(new Dimension(1000, 1000));
 
         this.add(controlPanel, BorderLayout.NORTH);
