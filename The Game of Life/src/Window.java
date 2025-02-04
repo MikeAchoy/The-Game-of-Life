@@ -30,8 +30,8 @@ public class Window extends JFrame {
                 int y = e.getY();
 
                 // Calculate row and col for cell block based on click coords
-                int col = x / gridPanel.getCellSizepx();  // j
-                int row = y / gridPanel.getCellSizepx();  // i
+                int col = x / gridPanel.getCellSize();  // j
+                int row = y / gridPanel.getCellSize();  // i
 
                 // Toggle cell at that location
                 gridPanel.toggleLifeCell(row, col);

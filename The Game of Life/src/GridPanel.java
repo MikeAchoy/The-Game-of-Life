@@ -5,12 +5,12 @@ import java.util.concurrent.TimeUnit;
 public class GridPanel extends JPanel {
 
     // Graphics and Matrix variables
-    private final int cellSizepx = 10;
+    private final int cellSize = 10;
     private final  int NUMBER_CELL_COLS = 100;
     private final int NUMBER_CELL_ROWS = 100;
 
     // Run time window variables
-    private int renderDelayMiliseconds = 1000;
+    private int renderDelayMilliseconds = 1000;
     private boolean run = true;
 
     private LifeCell[][] lifeCells = new LifeCell[100][100];
@@ -35,7 +35,7 @@ public class GridPanel extends JPanel {
             for (int j = 0; j < NUMBER_CELL_COLS; j++){
                 LifeCell currCell = lifeCells[i][j];
                 if (currCell.isAlive()){
-                    g2d.fill3DRect(currCell.getX(), currCell.getY(), cellSizepx, cellSizepx, false);
+                    g2d.fill3DRect(currCell.getX(), currCell.getY(), cellSize, cellSize, false);
                 }
             }
         }
@@ -54,9 +54,9 @@ public class GridPanel extends JPanel {
             xDelta = 0;
             for (int j = 0; j < NUMBER_CELL_COLS; j++){
                 lifeCells[i][j] = new LifeCell(xDelta, yDelta);
-                xDelta += cellSizepx;
+                xDelta += cellSize;
             }
-            yDelta += cellSizepx;
+            yDelta += cellSize;
         }
     }
 
@@ -80,7 +80,7 @@ public class GridPanel extends JPanel {
                 for (int i = 0; i < NUMBER_CELL_ROWS; i++){
                     for (int j = 0; j < NUMBER_CELL_COLS; j++){
                         int liveNeighbors = countLiveNeighbors(lifeCells, i, j);
-                        // Implements Conway's logic to determine if cell will servive.
+                        // Implements Conway's logic to determine if cell will survive.
                         if (lifeCells[i][j].isAlive()){
                             if (liveNeighbors < 2 || liveNeighbors > 3){
                                 newCells[i][j].setDead(); // Underpopulation or overpopulation
@@ -98,7 +98,7 @@ public class GridPanel extends JPanel {
                 
                 // Wait timer
                 try {
-                    TimeUnit.MILLISECONDS.sleep(renderDelayMiliseconds);
+                    TimeUnit.MILLISECONDS.sleep(renderDelayMilliseconds);
                 } catch (InterruptedException e){
                     e.printStackTrace();
                 }
@@ -168,8 +168,8 @@ public class GridPanel extends JPanel {
         repaint();
     }
 
-    public int getCellSizepx(){
-        return this.cellSizepx;
+    public int getCellSize(){
+        return this.cellSize;
     }
 
     public void start(){
@@ -182,6 +182,6 @@ public class GridPanel extends JPanel {
     }
 
     public void setRenderDelay(int delayToSetMS){
-        this.renderDelayMiliseconds = delayToSetMS;
+        this.renderDelayMilliseconds = delayToSetMS;
     }
 }
