@@ -9,18 +9,40 @@ import javax.swing.JSlider;
 
 public class ControlPanel extends JPanel{
 
-    private final int PANEL_WIDTH = 1000;
-    private final int PANEL_HEIGHT = 100;
+    // Control objects inside this panel.
+    private final JButton startButton;
+    private final JButton stopButton;
+    private final JButton clearButton;
+    private final JSlider speedSlider;
+    private final JLabel speedLabel;
 
-    private JButton startButton;
-    private JButton stopButton;
-    private JButton clearButton;
-    private JSlider speedSlider;
-    private JLabel speedLabel;
+    // GridPanel reference for controlling the grid canvas.
+    private final GridPanel gridPanelRef;
 
-    private GridPanel gridPanelRef;
+    // Different types of life structures that can be put on canvas
+    private enum lifeStructures{
+        BLOCK,      // Still Lifes
+        BEEHIVE,
+        LOAF,
+        BOAT,
+        TUB,
+
+        BLINKER,    // Oscillators
+        TOAD,
+        BEACON,
+        PULSAR,
+        PENTADECATHLON,
+
+        GLIDER,     // Spaceships
+        SMALL_SPACESHIP,
+        MEDIUM_SPACESHIP,
+        LARGE_SPACESHIP
+    }
 
     public ControlPanel(GridPanel gridPanelRefToSet){
+        // Render panel width and height.
+        int PANEL_WIDTH = 1000;
+        int PANEL_HEIGHT = 100;
         // Set Control Panel options
         this.setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
 

@@ -28,7 +28,7 @@ public class GridPanel extends JPanel {
         super.paintComponent(g); 
         Graphics2D g2d = (Graphics2D) g; 
         
-        // Draw each grid cell accorind to lifeCell pos
+        // Draw each grid cell according to lifeCell pos.
         g2d.setColor(Color.BLACK);
 
         for (int i = 0; i < NUMBER_CELL_ROWS; i++){
