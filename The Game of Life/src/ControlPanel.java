@@ -101,7 +101,7 @@ public class ControlPanel extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
                 LifeStructure selectedStructure = (LifeStructure)structureComboBox.getSelectedItem();
-                // Add this structure to gridPanel ref.
+                gridPanelRef.setLifeStructureToDraw(selectedStructure);
             }
         });
     }
