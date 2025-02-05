@@ -162,6 +162,10 @@ public class GridPanel extends JPanel {
         repaint();
     }
 
+    public void setLifeStructureToDraw(LifeStructure lifeStructureToDraw){
+        this.lifeStructureToDraw = lifeStructureToDraw;
+    }
+
     public LifeCell[][] getLifeCells(){
         return this.lifeCells;
     }
