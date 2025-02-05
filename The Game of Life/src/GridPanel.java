@@ -1,6 +1,7 @@
 import javax.swing.JPanel;
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
+import utils.LifeStructure;
 
 public class GridPanel extends JPanel {
 
@@ -8,6 +9,8 @@ public class GridPanel extends JPanel {
     private final int cellSize = 10;
     private final  int NUMBER_CELL_COLS = 100;
     private final int NUMBER_CELL_ROWS = 100;
+
+    LifeStructure lifeStructureToDraw;
 
     // Run time window variables
     private int renderDelayMilliseconds = 1000;
@@ -26,7 +29,11 @@ public class GridPanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g); 
-        Graphics2D g2d = (Graphics2D) g; 
+        Graphics2D g2d = (Graphics2D) g;
+        /*
+            TODO: figure out how to repaint pixel selection and structures based on structureComboBox
+             in the controlPanel object.
+        */
         
         // Draw each grid cell according to lifeCell pos.
         g2d.setColor(Color.BLACK);
