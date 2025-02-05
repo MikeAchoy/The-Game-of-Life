@@ -1,44 +1,24 @@
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import utils.LifeStructure;
 
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSlider;
+import javax.swing.*;
 
 public class ControlPanel extends JPanel{
 
-    // Control objects inside this panel.
+    // Control objects for this panel.
     private final JButton startButton;
     private final JButton stopButton;
     private final JButton clearButton;
     private final JSlider speedSlider;
     private final JLabel speedLabel;
+    private final JComboBox<LifeStructure> structureComboBox;
 
     // GridPanel reference for controlling the grid canvas.
     private final GridPanel gridPanelRef;
 
-    // Different types of life structures that can be put on canvas
-    private enum lifeStructures{
-        BLOCK,      // Still Lifes
-        BEEHIVE,
-        LOAF,
-        BOAT,
-        TUB,
-
-        BLINKER,    // Oscillators
-        TOAD,
-        BEACON,
-        PULSAR,
-        PENTADECATHLON,
-
-        GLIDER,     // Spaceships
-        SMALL_SPACESHIP,
-        MEDIUM_SPACESHIP,
-        LARGE_SPACESHIP
-    }
-
+    // Main constructor.
     public ControlPanel(GridPanel gridPanelRefToSet){
         // Render panel width and height.
         int PANEL_WIDTH = 1000;
@@ -52,15 +32,20 @@ public class ControlPanel extends JPanel{
         this.clearButton = new JButton("Clear");
         this.speedSlider = new JSlider(50, 1000, 500);
         this.speedLabel = new JLabel(Integer.toString(speedSlider.getValue()));
+        this.structureComboBox = new JComboBox<>(LifeStructure.values());
 
+        // Set girdPanel reference to ref passed in constructor.
         this.gridPanelRef = gridPanelRefToSet;
 
+        // Add control objects to panel.
         this.add(startButton);
         this.add(stopButton);
         this.add(clearButton);
         this.add(speedSlider);
         this.add(speedLabel);
-        
+        this.add(structureComboBox);
+
+        // Adds listener objects to control objects.
         initComponentListeners();
     }
 
@@ -108,6 +93,15 @@ public class ControlPanel extends JPanel{
                 // Update new delay in label and gridPanel
                 speedLabel.setText(Integer.toString(delayMS));
                 gridPanelRef.setRenderDelay(delayMS);
+            }
+        });
+
+        this.structureComboBox.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                LifeStructure selectedStructure = (LifeStructure)structureComboBox.getSelectedItem();
+                // Add this structure to gridPanel ref.
             }
         });
     }
