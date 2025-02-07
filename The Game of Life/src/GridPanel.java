@@ -10,8 +10,6 @@ public class GridPanel extends JPanel {
     private final  int NUMBER_CELL_COLS = 100;
     private final int NUMBER_CELL_ROWS = 100;
 
-    LifeStructure lifeStructureToDraw;
-
     // Run time window variables
     private int renderDelayMilliseconds = 1000;
     private boolean run = true;
@@ -160,10 +158,6 @@ public class GridPanel extends JPanel {
             }
         }
         repaint();
-    }
-
-    public void setLifeStructureToDraw(LifeStructure lifeStructureToDraw){
-        this.lifeStructureToDraw = lifeStructureToDraw;
     }
 
     public LifeCell[][] getLifeCells(){
