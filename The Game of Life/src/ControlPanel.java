@@ -17,6 +17,7 @@ public class ControlPanel extends JPanel{
 
     // GridPanel reference for controlling the grid canvas.
     private final GridPanel gridPanelRef;
+    private LifeStructure selectedStructure;
 
     // Main constructor.
     public ControlPanel(GridPanel gridPanelRefToSet){
@@ -95,9 +96,12 @@ public class ControlPanel extends JPanel{
         this.structureComboBox.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                LifeStructure selectedStructure = (LifeStructure)structureComboBox.getSelectedItem();
-                gridPanelRef.setLifeStructureToDraw(selectedStructure);
+                selectedStructure = (LifeStructure)structureComboBox.getSelectedItem();
             }
         });
+    }
+
+    public LifeStructure getSelectedStructure(){
+        return selectedStructure;
     }
 }
