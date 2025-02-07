@@ -52,7 +52,6 @@ public class ControlPanel extends JPanel{
     public void initComponentListeners(){
 
         this.startButton.addActionListener(new ActionListener(){
-
             @Override
             public void actionPerformed(ActionEvent e){
                 // I want it to use the gridPanelRef in these methods.
@@ -61,7 +60,6 @@ public class ControlPanel extends JPanel{
         });
 
         this.stopButton.addActionListener(new ActionListener(){
-
             @Override
             public void actionPerformed(ActionEvent e){
                 gridPanelRef.stop();
@@ -69,7 +67,6 @@ public class ControlPanel extends JPanel{
         }); 
 
         this.clearButton.addActionListener(new ActionListener(){
-
             @Override
             public void actionPerformed(ActionEvent e){
                 gridPanelRef.clearGrid();
@@ -77,7 +74,6 @@ public class ControlPanel extends JPanel{
         });
 
         this.clearButton.addActionListener(new ActionListener(){
-
             @Override
             public void actionPerformed(ActionEvent e){
                 gridPanelRef.clearGrid();
@@ -97,7 +93,6 @@ public class ControlPanel extends JPanel{
         });
 
         this.structureComboBox.addActionListener(new ActionListener(){
-
             @Override
             public void actionPerformed(ActionEvent e) {
                 LifeStructure selectedStructure = (LifeStructure)structureComboBox.getSelectedItem();
