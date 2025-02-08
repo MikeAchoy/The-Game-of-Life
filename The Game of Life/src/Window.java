@@ -36,11 +36,36 @@ public class Window extends JFrame {
 
                 LifeStructure structureToToggle = controlPanel.getSelectedStructure();
 
-                // TODO: Create structure here, this is where we need to have struct type from enum
-                // Control flow for which structures to toggle on grid.
-
+                // TODO: Finish implementing all structures types.
+                // Control flow for structures to toggle on grid.
                 // Toggle cells according to x, y as center
                 switch (structureToToggle){
+                    case BLOCK:
+                        // Row is y, col is x.
+                        gridPanel.toggleLifeCell(row, col);
+                        gridPanel.toggleLifeCell(row, col - 1);
+                        gridPanel.toggleLifeCell(row - 1, col);
+                        gridPanel.toggleLifeCell(row - 1, col - 1);
+                        break;
+                    case BEEHIVE:
+                        gridPanel.toggleLifeCell(row - 1, col);
+                        gridPanel.toggleLifeCell(row - 1, col - 1);
+                        gridPanel.toggleLifeCell(row, col + 1);
+                        gridPanel.toggleLifeCell(row, col - 2);
+                        gridPanel.toggleLifeCell(row - 1, col);
+                        gridPanel.toggleLifeCell(row - 1, col - 1);
+                        break;
+                    case TUB:
+                        gridPanel.toggleLifeCell(row - 1, col);
+                        gridPanel.toggleLifeCell(row + 1, col);
+                        gridPanel.toggleLifeCell(row, col - 1);
+                        gridPanel.toggleLifeCell(row, col + 1);
+                        break;
+                    case BLINKER:
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row + 1, col);
+                        gridPanel.toggleLifeCell(row - 1, col);
+                        break;
                     case GLIDER:
                         gridPanel.toggleLifeCell(row, col + 1);
                         gridPanel.toggleLifeCell(row - 1, col);
