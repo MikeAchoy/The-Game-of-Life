@@ -34,6 +34,7 @@ public class ControlPanel extends JPanel{
         this.speedSlider = new JSlider(50, 1000, 500);
         this.speedLabel = new JLabel(Integer.toString(speedSlider.getValue()));
         this.structureComboBox = new JComboBox<>(LifeStructure.values());
+        this.structureComboBox.setSelectedItem(LifeStructure.SINGLE_PIXEL);
 
         // Set girdPanel reference to ref passed in constructor.
         this.gridPanelRef = gridPanelRefToSet;
@@ -48,6 +49,7 @@ public class ControlPanel extends JPanel{
 
         // Adds listener objects to control objects.
         initComponentListeners();
+        selectedStructure = (LifeStructure) structureComboBox.getSelectedItem();
     }
 
     public void initComponentListeners(){
