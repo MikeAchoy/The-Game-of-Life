@@ -3,6 +3,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import utils.LifeStructure;
 
 public class Window extends JFrame {
 
@@ -14,6 +15,7 @@ public class Window extends JFrame {
     public Window(){
         this.setLocationRelativeTo(null);
         this.setSize(new Dimension(WINDOW_WIDTH, WINDOW_HEIGHT));
+        //  Maybe make it resizeable?
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new BorderLayout());
@@ -24,16 +26,32 @@ public class Window extends JFrame {
         gridPanel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e){
-                // Get the x and y coordinates of click
+                // Get the x and y coordinates of click.
                 int x = e.getX();
                 int y = e.getY();
 
-                // Calculate row and col for cell block based on click coords
+                // Calculate row and col for cell block.
                 int col = x / gridPanel.getCellSize();  // j
                 int row = y / gridPanel.getCellSize();  // i
 
-                // Toggle cell at that location
-                gridPanel.toggleLifeCell(row, col);
+                LifeStructure structureToToggle = controlPanel.getSelectedStructure();
+
+                // TODO: Create structure here, this is where we need to have struct type from enum
+                // Control flow for which structures to toggle on grid.
+
+                // Toggle cells according to x, y as center
+                switch (structureToToggle){
+                    case GLIDER:
+                        gridPanel.toggleLifeCell(row, col + 1);
+                        gridPanel.toggleLifeCell(row - 1, col);
+                        gridPanel.toggleLifeCell(row +  1, col);
+                        gridPanel.toggleLifeCell(row + 1, col + 1);
+                        gridPanel.toggleLifeCell(row + 1, col - 1);
+                        break;
+                    default:
+                        gridPanel.toggleLifeCell(row, col);
+                        break;
+                }
             }
         });
         
