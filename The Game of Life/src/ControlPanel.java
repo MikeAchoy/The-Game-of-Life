@@ -31,7 +31,7 @@ public class ControlPanel extends JPanel{
         this.startButton = new JButton("Start");
         this.stopButton = new JButton("Stop");
         this.clearButton = new JButton("Clear");
-        this.speedSlider = new JSlider(50, 1000, 500);
+        this.speedSlider = new JSlider(1, 1000, 500);
         this.speedLabel = new JLabel(Integer.toString(speedSlider.getValue()));
         this.structureComboBox = new JComboBox<>(LifeStructure.values());
         this.structureComboBox.setSelectedItem(LifeStructure.SINGLE_PIXEL);
