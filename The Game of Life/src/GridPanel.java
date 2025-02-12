@@ -28,11 +28,7 @@ public class GridPanel extends JPanel {
     protected void paintComponent(Graphics g){
         super.paintComponent(g); 
         Graphics2D g2d = (Graphics2D) g;
-        /*
-            TODO: figure out how to repaint pixel selection and structures based on structureComboBox
-             in the controlPanel object.
-        */
-        
+
         // Draw each grid cell according to lifeCell pos.
         g2d.setColor(Color.BLACK);
 
