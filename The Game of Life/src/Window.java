@@ -47,6 +47,7 @@ public class Window extends JFrame {
                         gridPanel.toggleLifeCell(row - 1, col);
                         gridPanel.toggleLifeCell(row - 1, col - 1);
                         break;
+
                     case BEEHIVE:
                         gridPanel.toggleLifeCell(row - 1, col);
                         gridPanel.toggleLifeCell(row - 1, col - 1);
@@ -55,17 +56,38 @@ public class Window extends JFrame {
                         gridPanel.toggleLifeCell(row - 1, col);
                         gridPanel.toggleLifeCell(row - 1, col - 1);
                         break;
+
                     case TUB:
                         gridPanel.toggleLifeCell(row - 1, col);
                         gridPanel.toggleLifeCell(row + 1, col);
                         gridPanel.toggleLifeCell(row, col - 1);
                         gridPanel.toggleLifeCell(row, col + 1);
                         break;
+
                     case BLINKER:
                         gridPanel.toggleLifeCell(row , col);
                         gridPanel.toggleLifeCell(row + 1, col);
                         gridPanel.toggleLifeCell(row - 1, col);
                         break;
+
+                    case TOAD:
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row , col + 1);
+                        gridPanel.toggleLifeCell(row , col + 2);
+                        gridPanel.toggleLifeCell(row - 1 , col);
+                        gridPanel.toggleLifeCell(row - 1, col + 1);
+                        gridPanel.toggleLifeCell(row - 1, col - 1);
+                        break;
+
+                    case BEACON:
+                        gridPanel.toggleLifeCell(row , col + 1);
+                        gridPanel.toggleLifeCell(row - 1, col + 1);
+                        gridPanel.toggleLifeCell(row - 1, col);
+                        gridPanel.toggleLifeCell(row + 1, col - 2);
+                        gridPanel.toggleLifeCell(row + 2, col - 2);
+                        gridPanel.toggleLifeCell(row + 2, col - 1);
+                        break;
+
                     case GLIDER:
                         gridPanel.toggleLifeCell(row, col + 1);
                         gridPanel.toggleLifeCell(row - 1, col);
@@ -73,6 +95,7 @@ public class Window extends JFrame {
                         gridPanel.toggleLifeCell(row + 1, col + 1);
                         gridPanel.toggleLifeCell(row + 1, col - 1);
                         break;
+
                     default:
                         gridPanel.toggleLifeCell(row, col);
                         break;
