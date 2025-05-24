@@ -1,6 +1,6 @@
 # The Game of Life
 
-![Game Of Life GIF](README_files/GOF.gif)
+![Game Of Life GIF](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2hya2xzZW1jNG9xbzljd3Y1MTluY3o1eGYwcGhoeDlvdjcxcDM2eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/d7SnByEMkrdeoVQ2lT/giphy.gif)
 
 ## Getting Started
 This is a custom implementation of Conway's Game of Life with additional features. Unlike the traditional infinite grid, this version acts as a sandbox where cells remain within the canvas boundaries. It also includes a structure placement system, allowing users to select premade patterns from a dropdown and place them onto the grid by clicking.
