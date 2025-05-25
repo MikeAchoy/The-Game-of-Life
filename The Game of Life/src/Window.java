@@ -41,7 +41,6 @@ public class Window extends JFrame {
                 switch (structureToToggle){
                     // Still life structures
                     case BLOCK:
-                        System.out.println("Row: " + row + ", Col: " + col);
                         gridPanel.toggleLifeCell(row, col); // Row is y, col is x.
                         gridPanel.toggleLifeCell(row, col - 1);
                         gridPanel.toggleLifeCell(row - 1, col);
@@ -49,7 +48,6 @@ public class Window extends JFrame {
                         break;
 
                     case BEEHIVE:
-                        System.out.println("Row: " + row + ", Col: " + col);
                         gridPanel.toggleLifeCell(row - 1, col);
                         gridPanel.toggleLifeCell(row - 1, col - 1);
                         gridPanel.toggleLifeCell(row, col + 1);
@@ -59,7 +57,6 @@ public class Window extends JFrame {
                         break;
 
                     case LOAF:
-                        System.out.println("Row: " + row + ", Col: " + col);
                         gridPanel.toggleLifeCell(row, col);
                         gridPanel.toggleLifeCell(row - 1, col + 1);
                         gridPanel.toggleLifeCell(row + 1, col + 1);
@@ -78,7 +75,6 @@ public class Window extends JFrame {
                         break;
 
                     case TUB:
-                        System.out.println("Row: " + row + ", Col: " + col);
                         gridPanel.toggleLifeCell(row - 1, col);
                         gridPanel.toggleLifeCell(row + 1, col);
                         gridPanel.toggleLifeCell(row, col - 1);
@@ -87,14 +83,12 @@ public class Window extends JFrame {
 
                     // Oscillator life structures
                     case BLINKER:
-                        System.out.println("Row: " + row + ", Col: " + col);
                         gridPanel.toggleLifeCell(row , col);
                         gridPanel.toggleLifeCell(row + 1, col);
                         gridPanel.toggleLifeCell(row - 1, col);
                         break;
 
                     case TOAD:
-                        System.out.println("Row: " + row + ", Col: " + col);
                         gridPanel.toggleLifeCell(row , col);
                         gridPanel.toggleLifeCell(row , col + 1);
                         gridPanel.toggleLifeCell(row , col + 2);
@@ -104,7 +98,6 @@ public class Window extends JFrame {
                         break;
 
                     case BEACON:
-                        System.out.println("Row: " + row + ", Col: " + col);
                         gridPanel.toggleLifeCell(row , col + 1);
                         gridPanel.toggleLifeCell(row - 1, col + 1);
                         gridPanel.toggleLifeCell(row - 1, col);
@@ -115,7 +108,6 @@ public class Window extends JFrame {
 
                     // Spaceship life structures
                     case GLIDER:
-                        System.out.println("Row: " + row + ", Col: " + col);
                         gridPanel.toggleLifeCell(row, col + 1);
                         gridPanel.toggleLifeCell(row - 1, col);
                         gridPanel.toggleLifeCell(row +  1, col);
@@ -124,7 +116,6 @@ public class Window extends JFrame {
                         break;
 
                     default:
-                        System.out.println("Row: " + row + ", Col: " + col);
                         gridPanel.toggleLifeCell(row, col);
                         break;
                 }
