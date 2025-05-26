@@ -106,6 +106,78 @@ public class Window extends JFrame {
                         gridPanel.toggleLifeCell(row + 2, col - 1);
                         break;
 
+                    case PULSAR:
+                        gridPanel.toggleLifeCell(row + 1, col + 2);
+                        gridPanel.toggleLifeCell(row + 1, col + 3);
+                        gridPanel.toggleLifeCell(row + 1, col + 4);
+                        gridPanel.toggleLifeCell(row - 1, col + 2);
+                        gridPanel.toggleLifeCell(row - 1, col + 3);
+                        gridPanel.toggleLifeCell(row - 1, col + 4);
+                        gridPanel.toggleLifeCell(row + 1, col - 2);
+                        gridPanel.toggleLifeCell(row + 1, col - 3);
+                        gridPanel.toggleLifeCell(row + 1, col - 4);
+                        gridPanel.toggleLifeCell(row - 1, col - 2);
+                        gridPanel.toggleLifeCell(row - 1, col - 3);
+                        gridPanel.toggleLifeCell(row - 1, col - 4);
+                        gridPanel.toggleLifeCell(row + 2, col + 1);
+                        gridPanel.toggleLifeCell(row + 3, col + 1);
+                        gridPanel.toggleLifeCell(row + 4, col + 1);
+                        gridPanel.toggleLifeCell(row - 2, col + 1);
+                        gridPanel.toggleLifeCell(row - 3, col + 1);
+                        gridPanel.toggleLifeCell(row - 4, col + 1);
+                        gridPanel.toggleLifeCell(row + 2, col - 1);
+                        gridPanel.toggleLifeCell(row + 3, col - 1);
+                        gridPanel.toggleLifeCell(row + 4, col - 1);
+                        gridPanel.toggleLifeCell(row - 2, col - 1);
+                        gridPanel.toggleLifeCell(row - 3, col - 1);
+                        gridPanel.toggleLifeCell(row - 4, col - 1);
+                        gridPanel.toggleLifeCell(row + 6, col - 2);
+                        gridPanel.toggleLifeCell(row + 6, col - 3);
+                        gridPanel.toggleLifeCell(row + 6, col - 4);
+                        gridPanel.toggleLifeCell(row + 6, col + 2);
+                        gridPanel.toggleLifeCell(row + 6, col + 3);
+                        gridPanel.toggleLifeCell(row + 6, col + 4);
+                        gridPanel.toggleLifeCell(row - 6, col - 2);
+                        gridPanel.toggleLifeCell(row - 6, col - 3);
+                        gridPanel.toggleLifeCell(row - 6, col - 4);
+                        gridPanel.toggleLifeCell(row - 6, col + 2);
+                        gridPanel.toggleLifeCell(row - 6, col + 3);
+                        gridPanel.toggleLifeCell(row - 6, col + 4);
+                        gridPanel.toggleLifeCell(row + 2, col + 6);
+                        gridPanel.toggleLifeCell(row + 3, col + 6);
+                        gridPanel.toggleLifeCell(row + 4, col + 6);
+                        gridPanel.toggleLifeCell(row - 2, col + 6);
+                        gridPanel.toggleLifeCell(row - 3, col + 6);
+                        gridPanel.toggleLifeCell(row - 4, col + 6);
+                        gridPanel.toggleLifeCell(row + 2, col - 6);
+                        gridPanel.toggleLifeCell(row + 3, col - 6);
+                        gridPanel.toggleLifeCell(row + 4, col - 6);
+                        gridPanel.toggleLifeCell(row - 2, col - 6);
+                        gridPanel.toggleLifeCell(row - 3, col - 6);
+                        gridPanel.toggleLifeCell(row - 4, col - 6);
+                        break;
+
+                    case PENTADECATHLON:
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row , col - 1);
+                        gridPanel.toggleLifeCell(row , col - 2);
+                        gridPanel.toggleLifeCell(row + 9, col);
+                        gridPanel.toggleLifeCell(row + 9, col - 1);
+                        gridPanel.toggleLifeCell(row + 9, col - 2);
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row , col);
+                        break;
+
                     // Spaceship life structures
                     case GLIDER:
                         gridPanel.toggleLifeCell(row, col + 1);
