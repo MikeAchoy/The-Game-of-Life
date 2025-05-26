@@ -14,9 +14,11 @@ public enum LifeStructure {
     BEACON,
     PULSAR,
     PENTADECATHLON,
+    CLOVERLEAF, // TODO
 
     GLIDER,       // Spaceships
     SMALL_SPACESHIP,
     MEDIUM_SPACESHIP,
-    LARGE_SPACESHIP
+    LARGE_SPACESHIP,
+    HAMMERHEAD_SPACESHIP // TODO
 }
