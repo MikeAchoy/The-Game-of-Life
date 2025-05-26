@@ -198,7 +198,10 @@ public class Window extends JFrame {
                     case LARGE_SPACESHIP:
                         break;
 
-                     */
+                    case HAMMERHEAD_SPACESHIP:
+                        break;
+                        
+                    */
                 
                     default:
                         gridPanel.toggleLifeCell(row, col);
