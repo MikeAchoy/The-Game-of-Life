@@ -164,18 +164,18 @@ public class Window extends JFrame {
                         gridPanel.toggleLifeCell(row + 9, col);
                         gridPanel.toggleLifeCell(row + 9, col - 1);
                         gridPanel.toggleLifeCell(row + 9, col - 2);
-                        gridPanel.toggleLifeCell(row , col);
-                        gridPanel.toggleLifeCell(row , col);
-                        gridPanel.toggleLifeCell(row , col);
-                        gridPanel.toggleLifeCell(row , col);
-                        gridPanel.toggleLifeCell(row , col);
-                        gridPanel.toggleLifeCell(row , col);
-                        gridPanel.toggleLifeCell(row , col);
-                        gridPanel.toggleLifeCell(row , col);
-                        gridPanel.toggleLifeCell(row , col);
-                        gridPanel.toggleLifeCell(row , col);
-                        gridPanel.toggleLifeCell(row , col);
-                        gridPanel.toggleLifeCell(row , col);
+                        gridPanel.toggleLifeCell(row + 1, col + 1);
+                        gridPanel.toggleLifeCell(row + 2, col + 2);
+                        gridPanel.toggleLifeCell(row + 1, col - 3);
+                        gridPanel.toggleLifeCell(row + 2, col - 4);
+                        gridPanel.toggleLifeCell(row + 4, col + 3);
+                        gridPanel.toggleLifeCell(row + 5, col + 3);
+                        gridPanel.toggleLifeCell(row + 4, col - 5);
+                        gridPanel.toggleLifeCell(row + 5, col - 5);
+                        gridPanel.toggleLifeCell(row + 8, col + 1);
+                        gridPanel.toggleLifeCell(row + 7, col + 2);
+                        gridPanel.toggleLifeCell(row + 7, col - 4);
+                        gridPanel.toggleLifeCell(row + 8, col - 3);
                         break;
 
                     // Spaceship life structures
