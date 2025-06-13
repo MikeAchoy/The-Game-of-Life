@@ -187,11 +187,19 @@ public class Window extends JFrame {
                         gridPanel.toggleLifeCell(row + 1, col - 1);
                         break;
                     
-                    /*
-
                     case SMALL_SPACESHIP:
+                        gridPanel.toggleLifeCell(row, col);
+                        gridPanel.toggleLifeCell(row - 1, col);
+                        gridPanel.toggleLifeCell(row - 2, col);
+                        gridPanel.toggleLifeCell(row, col - 1);
+                        gridPanel.toggleLifeCell(row, col - 2);
+                        gridPanel.toggleLifeCell(row, col - 3);
+                        gridPanel.toggleLifeCell(row - 3, col - 1);
+                        gridPanel.toggleLifeCell(row - 1, col - 4);
+                        gridPanel.toggleLifeCell(row - 3, col - 4);
                         break;
-
+                    
+                    /*
                     case MEDIUM_SPACESHIP:
                         break;
 

@@ -1,4 +1,5 @@
 public class LifeCell {
+    
     private int x, y;
     private boolean isAlive;
 
